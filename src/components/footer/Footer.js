@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Bannier = () => {
+const Footer = () => {
     return (
         <div>
-            <p>banniere</p>
+            
         </div>
     );
 };
 
-export default Bannier;
+export default Footer;
