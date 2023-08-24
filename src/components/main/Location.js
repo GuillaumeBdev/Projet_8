@@ -15,9 +15,9 @@ const Location = () =>{
     
     return (
         <div className='ul-grid'>
-            {locations.map(({id, title, cover}) => {
+            {locations.map(({id, title, cover, location}) => {
                 return (  
-                    <Thumb key={id} title={title} cover={cover} id={id}/>
+                    <Thumb key={id} title={title} cover={cover} id={id} location={location}/>
                 )
             })}
         </div>
