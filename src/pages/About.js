@@ -2,7 +2,11 @@ import React from 'react';
 import Header from '../Components/header/Header';
 import Banner from '../Components/header/Banner';
 import Footer from '../Components/footer/Footer';
-import DropDown from '../Components/about/Dropdown';
+import flecheBas from '../images/fleche-bas.png';
+import flecheHaut from '../images/fleche-haut.png';
+import '../styles/about.css';
+import { useState } from 'react';
+
 
 const recommandation = [
     {
@@ -32,11 +36,11 @@ const About = () => {
         <React.Fragment>
             <Header />
             <Banner title={null} className='banner-about' />
-            <main className='div-dropdown'>
+            <main className='div-collapse'>
                 <ul>
                     {recommandation.map(({ key, title, data}) => (
                         <li key={key}>
-                            <DropDown title={title} data={data} className='titre-deroule' className2='h3-deroule' classP='p-deroulant'/>
+                            <Collapse title={title} data={data} className='titre-deroule' className2='h3-deroule' classP='p-deroulant'/>
                         </li> 
                     ))}
                 </ul>
@@ -47,3 +51,27 @@ const About = () => {
 };
 
 export default About;
+
+const Collapse = ({ title, data}) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return isOpen ? (
+        <div>
+            <h3 className='h3-description' onClick={() => setIsOpen(false)}>{title} <span><img src={flecheHaut} alt='fleche-directionnel'/></span></h3>
+            {typeof data === 'string' ? 
+                <p className='p-description'>{data}</p> : 
+                <ul className='p-description'>
+                    {data.map((element, index) => {
+                        return (
+                            <li key={`${index}-${element}`}>{element}</li>
+                        )
+                    })}
+                </ul> 
+            }         
+        </div>        
+    ) : (
+        <div>
+            <h3 className='h3-description' onClick={() => setIsOpen(true)}>{title} <span><img src={flecheBas} alt='fleche-directionnel'/></span></h3> 
+        </div>      
+    )
+}
