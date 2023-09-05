@@ -71,3 +71,16 @@ body {
     font-size: 3em;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (max-width: 900px){
+
+    .container .ul-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .div-banner{
+        height: 110px;
+    }
+}

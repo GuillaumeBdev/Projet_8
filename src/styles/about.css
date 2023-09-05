@@ -1,0 +1,71 @@
+body{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.div-collapse{
+  width: 80%;
+  margin: 30px auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.div-collapse ul {
+  padding: 0;
+}
+
+.h3-description{
+  background-color: #FF6060;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  padding: 7px 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.titre-description{
+  background-color: #FF6060;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  padding: 7px 18px;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+.p-description{
+  background-color: #F7F7F7;
+  color: #FF6060;
+  padding: 18px;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.h3-description span, .titre-deroule span {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.banner-about{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/banniere-about.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  height: 220px;
+  width: 90%;
+  margin: 0 auto 40px;
+}
+
+@media screen and (max-width: 650px) {
+  .div-dropdown{
+      width: 90%;
+  }
+}

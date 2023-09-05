@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/main.css';
-import Thumb from './Thumb';
+import Card from './card.js';
 
 const Location = () =>{
     const [locations, setLocations] = useState([]);
@@ -17,7 +17,7 @@ const Location = () =>{
         <div className='ul-grid'>
             {locations.map(({id, title, cover, location}) => {
                 return (  
-                    <Thumb key={id} title={title} cover={cover} id={id} location={location}/>
+                    <Card key={id} title={title} cover={cover} id={id} location={location}/>
                 )
             })}
         </div>
