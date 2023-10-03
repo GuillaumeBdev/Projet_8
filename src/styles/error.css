@@ -4,8 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-
-.main-error {
+body .main-error {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,15 +14,15 @@ body {
   padding: 0 50px;
   text-align: center;
 }
-.main-error .p-404 {
+body .main-error .p-404 {
   font-size: 20rem;
   margin: 0;
 }
-.main-error .p-oups {
+body .main-error .p-oups {
   font-size: 2rem;
   margin: 60px 0 180px;
 }
-.main-error .retour-accueil {
+body .main-error .retour-accueil {
   text-decoration: underline;
   color: #ff6060;
   font-size: 18px;
